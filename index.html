@@ -5,9 +5,18 @@
 <title>Domowe desery</title>
 
 <style>
+/* ===== TŁO Z DELIKATNĄ TEKSTURĄ ===== */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #fff8fb;
+  background:
+    linear-gradient(0deg, rgba(255,248,251,0.95), rgba(255,248,251,0.95)),
+    repeating-linear-gradient(
+      45deg,
+      #f6e6ec,
+      #f6e6ec 2px,
+      #fff8fb 2px,
+      #fff8fb 6px
+    );
   color: #3a2a20;
   max-width: 1100px;
   margin: auto;
@@ -56,6 +65,15 @@ h3 {
   margin-top: 30px;
 }
 
+/* ===== IKONKI PRZY NAGŁÓWKACH ===== */
+h3.ingredients-title::before {
+  content: "🍓 ";
+}
+
+h3.steps-title::before {
+  content: "📋 ";
+}
+
 /* ===== GALERIA ===== */
 .gallery {
   display: grid;
@@ -73,9 +91,8 @@ h3 {
   transition: transform 0.3s ease;
 }
 
-/* drobna nieregularność – artystyczny luz */
 .gallery a:nth-child(2) { transform: rotate(2deg); }
-.gallery a:nth-child(3) { transform: rotate(-3deg); } /* bardziej „krzywe” */
+.gallery a:nth-child(3) { transform: rotate(-3deg); }
 .gallery a:nth-child(4) { transform: rotate(1deg); }
 
 .gallery a:hover {
@@ -125,7 +142,7 @@ h3 {
   color: #8b1d3d;
 }
 
-/* ===== ZAPOWIEDŹ KOLEJNEGO DESERU ===== */
+/* ===== ZAPOWIEDŹ ===== */
 .next-dessert {
   margin-top: 60px;
   text-align: center;
@@ -136,7 +153,7 @@ h3 {
 
 /* ===== STOPKA ===== */
 .footer {
-  margin-top: 120px; /* więcej „oddechu” */
+  margin-top: 120px;
   text-align: center;
   font-size: 14px;
   color: #8b1d3d;
@@ -155,18 +172,10 @@ h3 {
   <h2>Deser Lotus z malinami</h2>
 
   <div class="gallery">
-    <a href="lotus-1.jpg" target="_blank">
-      <img src="lotus-1.jpg" alt="Deser Lotus z malinami">
-    </a>
-    <a href="lotus-2.jpg" target="_blank">
-      <img src="lotus-2.jpg" alt="Deser Lotus z malinami">
-    </a>
-    <a href="lotus-3.jpg" target="_blank">
-      <img src="lotus-3.jpg" alt="Deser Lotus z malinami">
-    </a>
-    <a href="lotus-4.jpg" target="_blank">
-      <img src="lotus-4.jpg" alt="Deser Lotus z malinami">
-    </a>
+    <a href="lotus-1.jpg" target="_blank"><img src="lotus-1.jpg"></a>
+    <a href="lotus-2.jpg" target="_blank"><img src="lotus-2.jpg"></a>
+    <a href="lotus-3.jpg" target="_blank"><img src="lotus-3.jpg"></a>
+    <a href="lotus-4.jpg" target="_blank"><img src="lotus-4.jpg"></a>
   </div>
 
   <p class="description">
@@ -174,7 +183,7 @@ h3 {
     Idealny na spokojne popołudnie przy kawie lub herbacie ☕
   </p>
 
-  <h3>Składniki</h3>
+  <h3 class="ingredients-title">Składniki</h3>
   <ul class="ingredients">
     <li>250 g mascarpone</li>
     <li>200 ml śmietanki 36%</li>
@@ -186,21 +195,17 @@ h3 {
     <li>Świeże maliny</li>
   </ul>
 
-  <h3>Sposób przygotowania</h3>
+  <h3 class="steps-title">Sposób przygotowania</h3>
   <ol class="steps">
-    <li>Masło rozpuść w rondelku i pozostaw do ostygnięcia.</li>
-    <li>Herbatniki rozkrusz i połącz z rozpuszczonym masłem.</li>
+    <li>Masło rozpuść i pozostaw do ostygnięcia.</li>
+    <li>Herbatniki rozkrusz i połącz z masłem.</li>
     <li>Ubij śmietankę na sztywno.</li>
-    <li>Mascarpone krótko zmiksuj i dodaj masło orzechowe.</li>
-    <li>Dodaj ubitą śmietankę i delikatnie wymieszaj.</li>
+    <li>Mascarpone zmiksuj z masłem orzechowym.</li>
+    <li>Dodaj śmietankę i delikatnie wymieszaj.</li>
     <li>Układaj warstwami herbatniki i krem.</li>
-    <li class="important">
-      Krem Biscoff rozpuść w kąpieli wodnej – nie wlewaj gorącego na masę!
-    </li>
-    <li>Udekoruj malinami i herbatnikami.</li>
-    <li class="important">
-      Schładzaj w lodówce minimum 2 godziny.
-    </li>
+    <li class="important">Krem Biscoff rozpuść w kąpieli wodnej – nie wlewaj gorącego!</li>
+    <li>Udekoruj malinami.</li>
+    <li class="important">Schładzaj w lodówce minimum 2 godziny.</li>
   </ol>
 
 </div>
