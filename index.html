@@ -1,8 +1,42 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Moje słodkości</title>
+ <style>
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #fff8f2;
+    color: #3a2a20;
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #8b4513;
+  }
+
+  h2 {
+    margin-top: 40px;
+    color: #a0522d;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  .gallery {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .gallery img {
+    width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+</style>
 </head>
 <body>
   <h1>Moje domowe wypieki i desery na każdą okazję 🍪</h1>
@@ -10,10 +44,12 @@
 
   <h2>Deser Lotus z malinami</h2>
 
-  <img src="lotus-1.jpg" width="250" alt="Deser Lotus z malinami – zdjęcie 1">
-<img src="lotus-2.jpg" width="250" alt="Deser Lotus z malinami – zdjęcie 2">
-<img src="lotus-3.jpg" width="250" alt="Deser Lotus z malinami – zdjęcie 3">
-<img src="lotus-4.jpg" width="250" alt="Deser Lotus z malinami – zdjęcie 4">
+ <div class="gallery">
+  <img src="lotus-1.jpg" alt="Deser Lotus z malinami - zdjęcie 1">
+  <img src="lotus-2.jpg" alt="Deser Lotus z malinami - zdjęcie 2">
+  <img src="lotus-3.jpg" alt="Deser Lotus z malinami - zdjęcie 3">
+  <img src="lotus-4.jpg" alt="Deser Lotus z malinami - zdjęcie 4">
+</div>
 
   <p>Słodkie, korzenne i lekko karmelowe.</p>
 </body>
