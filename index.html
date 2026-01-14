@@ -1,170 +1,173 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Słodkie inspiracje</title>
+<meta charset="UTF-8">
+<title>Domowe słodkości</title>
 
-  <!-- Czcionki -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+<style>
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fff8fb;
+  color: #3a2a20;
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+}
 
-  <style>
-    :root {
-      --raspberry-dark: #8b1d3d;
-      --raspberry: #b03060;
-      --raspberry-soft: #f6dbe4;
-      --text-main: #3a2a20;
-      --bg-main: #fff9fb;
-    }
+h1 {
+  text-align: center;
+  color: #8b1d3d;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
 
-    body {
-      font-family: "Quicksand", sans-serif;
-      background-color: var(--bg-main);
-      color: var(--text-main);
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 30px;
-    }
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #7a4a57;
+  margin-bottom: 40px;
+}
 
-    /* ===== NAGŁÓWEK ===== */
-    h1 {
-      font-family: "Playfair Display", serif;
-      text-align: center;
-      color: var(--raspberry-dark);
-      font-size: 44px;
-      margin-bottom: 6px;
-      letter-spacing: 1px;
-    }
+h2 {
+  color: #b03060;
+  margin-top: 40px;
+}
 
-    .subtitle {
-      text-align: center;
-      color: var(--raspberry);
-      font-size: 18px;
-      margin-bottom: 12px;
-    }
+h3 {
+  color: #8b1d3d;
+  margin-top: 30px;
+}
 
-    .intro {
-      text-align: center;
-      font-size: 16px;
-      color: #6a4a55;
-      margin-bottom: 45px;
-    }
+/* GALERIA */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
 
-    /* ===== KARTA DESERU ===== */
-    .dessert {
-      background: white;
-      border-radius: 22px;
-      padding: 35px;
-      box-shadow: 0 10px 30px rgba(176,48,96,0.18);
-      border-left: 8px solid var(--raspberry);
-    }
+.gallery a {
+  background: white;
+  padding: 12px 12px 30px 12px;
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(176,48,96,0.18);
+  transform: rotate(-1deg);
+  transition: transform 0.3s;
+}
 
-    h2 {
-      font-family: "Playfair Display", serif;
-      color: var(--raspberry-dark);
-      font-size: 28px;
-      margin-bottom: 25px;
-    }
+.gallery a:nth-child(even) {
+  transform: rotate(2deg);
+}
 
-    /* ===== GALERIA ===== */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      margin-bottom: 30px;
-    }
+.gallery a:hover {
+  transform: rotate(0deg) scale(1.05);
+}
 
-    .gallery img {
-      width: 100%;
-      background: white;
-      padding: 12px 12px 32px;
-      border-radius: 6px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.gallery img {
+  width: 100%;
+  border-radius: 4px;
+}
 
-    .gallery img:hover {
-      transform: rotate(-1deg) scale(1.04);
-      box-shadow: 0 18px 35px rgba(176,48,96,0.35);
-    }
+/* DESER BOX */
+.dessert {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 35px;
+  margin-top: 40px;
+  box-shadow: 0 12px 30px rgba(176,48,96,0.18);
+  border-left: 8px solid #b03060;
+}
 
-    /* ===== OPIS ===== */
-    .description {
-      font-style: italic;
-      color: #6a3a4a;
-      margin-bottom: 30px;
-    }
+.description {
+  font-style: italic;
+  margin-top: 15px;
+}
 
-    /* ===== SEKCJE ===== */
-    h3 {
-      color: var(--raspberry-dark);
-      margin-top: 30px;
-      font-size: 20px;
-    }
+/* LISTY */
+.ingredients {
+  list-style: "🍓 ";
+  margin-left: 20px;
+}
 
-    ul, ol {
-      margin-left: 22px;
-      line-height: 1.7;
-    }
+.steps {
+  margin-left: 20px;
+}
 
-    ul li::marker,
-    ol li::marker {
-      color: var(--raspberry);
-      font-weight: bold;
-    }
+.steps li {
+  margin-bottom: 10px;
+}
 
-    /* ===== MOBILE ===== */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 34px;
-      }
-
-      .dessert {
-        padding: 25px;
-      }
-    }
-  </style>
+.important {
+  background: #ffe6ee;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #8b1d3d;
+}
+</style>
 </head>
 
 <body>
 
-  <h1>Słodkie inspiracje</h1>
-  <p class="subtitle">Domowe desery w cukierniczym stylu</p>
-  <p class="intro">
-    Mała kolekcja domowych słodkości — krem, owoce i chwile przyjemności.
-  </p>
+<h1>Domowe słodkości na każdą okazję 🍪</h1>
+<p class="subtitle">Mój słodki pamiętnik z domowej kuchni</p>
 
-  <div class="dessert">
-    <h2>Deser Lotus z malinami</h2>
+<div class="dessert">
 
-    <div class="gallery">
-      <img src="lotus-1.jpg" alt="Deser Lotus z malinami">
-      <img src="lotus-2.jpg" alt="Deser Lotus z malinami">
-      <img src="lotus-3.jpg" alt="Deser Lotus z malinami">
-      <img src="lotus-4.jpg" alt="Deser Lotus z malinami">
-    </div>
+<h2>Deser Lotus z malinami</h2>
 
-    <p class="description">
-      Kremowy, lekko karmelowy deser przełamany świeżymi malinami. Idealny na spokojne popołudnie.
-    </p>
+<div class="gallery">
+  <a href="lotus-1.jpg" target="_blank">
+    <img src="lotus-1.jpg" alt="Deser Lotus z malinami">
+  </a>
+  <a href="lotus-2.jpg" target="_blank">
+    <img src="lotus-2.jpg" alt="Deser Lotus z malinami">
+  </a>
+  <a href="lotus-3.jpg" target="_blank">
+    <img src="lotus-3.jpg" alt="Deser Lotus z malinami">
+  </a>
+  <a href="lotus-4.jpg" target="_blank">
+    <img src="lotus-4.jpg" alt="Deser Lotus z malinami">
+  </a>
+</div>
 
-    <h3>Składniki</h3>
-    <ul>
-      <li>250 g mascarpone</li>
-      <li>200 ml śmietanki 30%</li>
-      <li>3–4 łyżki kremu Lotus</li>
-      <li>Herbatniki Lotus</li>
-      <li>Świeże maliny</li>
-    </ul>
+<p class="description">
+  Kremowy, lekko karmelowy 🍓
+</p>
 
-    <h3>Sposób wykonania</h3>
-    <ol>
-      <li>Ubij śmietankę na sztywno.</li>
-      <li>Dodaj mascarpone oraz krem Lotus, delikatnie wymieszaj.</li>
-      <li>Na dno pucharków ułóż pokruszone herbatniki.</li>
-      <li>Dodaj warstwę kremu i maliny.</li>
-      <li>Powtórz warstwy i schłódź w lodówce.</li>
-    </ol>
-  </div>
+<h3>Składniki</h3>
+<ul class="ingredients">
+  <li>250 g mascarpone</li>
+  <li>200 ml śmietanki 36%</li>
+  <li>2 łyżki cukru pudru</li>
+  <li>2 łyżki masła orzechowego</li>
+  <li>4–5 łyżek pasty Lotus Biscoff</li>
+  <li>Herbatniki Lotus (125 g + ok. 1/2 opakowania do dekoracji)</li>
+  <li>Masło – 60 g</li>
+  <li>Świeże maliny</li>
+</ul>
+
+<h3>Sposób przygotowania</h3>
+<ol class="steps">
+  <li>Masło rozpuść w rondelku i pozostaw do ostygnięcia.</li>
+  <li>Herbatniki rozkrusz i połącz z rozpuszczonym masłem.</li>
+  <li>Ubij śmietankę na sztywno (jeśli nie chce się ubić, możesz dodać śmietan-fix).</li>
+  <li>Mascarpone krótko zmiksuj i dodaj masło orzechowe – tylko do połączenia składników.</li>
+  <li>Dodaj ubitą śmietankę i delikatnie wymieszaj szpatułką do uzyskania gładkiej masy.</li>
+  <li>W pucharkach układaj warstwami pokruszone herbatniki i krem.</li>
+
+  <li class="important">
+    Pastę Biscoff rozpuść w kąpieli wodnej – nie wlewaj gorącej do masy, bo może się zwarzyć!
+  </li>
+
+  <li>Do dekoracji użyj pokruszonych herbatników oraz świeżych malin.</li>
+
+  <li class="important">
+    Schładzaj w lodówce minimum 2 godziny.
+  </li>
+</ol>
+
+</div>
 
 </body>
 </html>
