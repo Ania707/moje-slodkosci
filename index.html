@@ -2,164 +2,180 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <title>Moje słodkości</title>
+  <title>Moje domowe wypieki i desery</title>
 
   <style>
     body {
       font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #fff8f2;
+      background: #fff8fb;
       color: #3a2a20;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
       padding: 30px;
     }
 
     h1 {
       text-align: center;
-      color: #8b1d3d; /* malinowy */
+      color: #8b1d3d;
       margin-bottom: 10px;
     }
 
-    h2 {
-      margin-top: 30px;
-      color: #b03060; /* jaśniejsza malina */
+    .subtitle {
+      text-align: center;
+      color: #7a4a55;
+      margin-bottom: 40px;
     }
 
-    p {
+    /* ===== DESER ===== */
+    .dessert {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(176,48,96,0.15);
+      border-left: 6px solid #b03060;
+    }
+
+    h2 {
+      color: #b03060;
+      margin-bottom: 25px;
+    }
+
+    /* ===== GALERIA ===== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-bottom: 25px;
+    }
+
+    .gallery a {
+      text-decoration: none;
+    }
+
+    .gallery img {
+      width: 100%;
+      background: white;
+      padding: 12px 12px 30px;
+      border-radius: 6px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: rotate(-1deg) scale(1.04);
+      box-shadow: 0 18px 35px rgba(176,48,96,0.35);
+    }
+
+    /* ===== OPIS ===== */
+    .description {
+      margin: 20px 0 30px;
+      font-style: italic;
+      color: #6b3a4a;
+    }
+
+    /* ===== SEKCJE ===== */
+    h3 {
+      color: #8b1d3d;
+      margin-top: 30px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
       line-height: 1.6;
     }
 
-    .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  margin: 30px 0;
-}
-    }
-
-    .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  margin: 30px 0;
-}
-    .gallery img:hover {
-  transform: rotate(-1deg) scale(1.03);
-  box-shadow: 0 18px 35px rgba(176,48,96,0.35);
-}
-    }
-
-    }
-
-    .dessert {
-      background-color: #ffffff;
-      border-radius: 16px;
-      padding: 25px;
-      margin-top: 30px;
-      box-shadow: 0 8px 20px rgba(176,48,96,0.15);
-      border-left: 6px solid #b03060;
-    }
-    h3 {
-  margin-top: 25px;
-  color: #8b1d3d;
-}
-
-.ingredients,
-.steps {
-  margin-left: 20px;
-  line-height: 1.6;
-}
-
-.ingredients li::marker {
-  color: #b03060;
-}
+    /* ===== LIGHTBOX ===== */
     .lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
 
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-}
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
 
-.lightbox:target {
-  display: flex;
-}
+    .lightbox:target {
+      display: flex;
+    }
 
-.lightbox .close {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 40px;
-  color: white;
-  text-decoration: none;
-}
-
-.steps li::marker {
-  color: #b03060;
-  font-weight: bold;
-}
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 40px;
+      color: white;
+      text-decoration: none;
+    }
   </style>
 </head>
 
 <body>
 
-  <h1>Domowe wypieki i desery na każdą okazję 🍪</h1>
-  
+  <h1>Moje domowe wypieki i desery 🍪</h1>
+  <p class="subtitle">Tu zapisuję i pokazuję moje słodkości</p>
 
   <div class="dessert">
     <h2>Deser Lotus z malinami</h2>
 
     <div class="gallery">
-      <a href="#img1">
-    <img src="lotus-1.jpg" alt="Deser Lotus z malinami">
-  </a>
-  <a href="#img2">
-    <img src="lotus-2.jpg" alt="Deser Lotus z malinami">
-  </a>
-  <a href="#img3">
-    <img src="lotus-3.jpg" alt="Deser Lotus z malinami">
-  </a>
-  <a href="#img4">
-    <img src="lotus-4.jpg" alt="Deser Lotus z malinami">
-  </a>
+      <a href="#img1"><img src="lotus-1.jpg" alt="Deser Lotus z malinami"></a>
+      <a href="#img2"><img src="lotus-2.jpg" alt="Deser Lotus z malinami"></a>
+      <a href="#img3"><img src="lotus-3.jpg" alt="Deser Lotus z malinami"></a>
+      <a href="#img4"><img src="lotus-4.jpg" alt="Deser Lotus z malinami"></a>
     </div>
 
-    <p>Słodkie, korzenne i lekko karmelowe.</p>
-    <h3>Składniki</h3>
-<ul class="ingredients">
-  <li>250 g mascarpone</li>
-  <li>200 ml śmietanki 36%</li>
-  <li>2 łyżki cukru pudru</li>
-  <li>2 łyżki masła orzechowego</li>
-  <li>4-5 łyżek pasty Lotus Biscoff</li>
-  <li>Herbatniki Lotus 125g+ 1/2 herbatniki do dekoracji</li>
-  <li>Masło 60g
-  <li>Świeże maliny</li>
-</ul>
+    <p class="description">
+      Słodkie, korzenne i lekko karmelowe. Idealne połączenie kremu Lotus i świeżych malin 🍓
+    </p>
 
-<h3>Sposób wykonania</h3>
-<ol class="steps">
-  <li> Masło rozpuść w rondelku i zostaw do ostygnięcia.</li>
-  <li>Herbatniki rozkrusz i połącz z roztopionym masłem.</li>
-  <li>Ubij śmietankę na sztywno (jeśli śmietanka nie chce się ubić możesz dodać opakowanie śmietan-fixu.</li>
-  <li>Mascarpone krótko zmiksuj i dodaj masło orzechowe, tylko do połączenia się produktów.</li>
-  <li>Do mascarpone dodaj ubitą śmietankę i delikatnie wymieszaj szpatułką silikonową i połącz do gładkiej masy.</li>
-  <li>W pucharkach układaj warstwami pokruszone herbatniki,krem.</li>
-  <li> Pastę Biscoff rozpuść w kąpieli wodnej. Ważne! Nie wylewaj gorącej pasty na masę ponieważ może się zwarzyć.</li>
-  <li> Do dekoracji możesz użyć pokruszone herbatniki oraz świeże maliny
-  <li>Schłódź w lodówce minimum 2 godziny.</li>
-</ol>
+    <h3>Składniki</h3>
+    <ul>
+      <li>250 g mascarpone</li>
+      <li>200 ml śmietanki 30%</li>
+      <li>3–4 łyżki kremu Lotus</li>
+      <li>Herbatniki Lotus</li>
+      <li>Świeże maliny</li>
+    </ul>
+
+    <h3>Sposób wykonania</h3>
+    <ol>
+      <li>Ubij śmietankę na sztywno.</li>
+      <li>Dodaj mascarpone i krem Lotus, delikatnie wymieszaj.</li>
+      <li>Na dno pucharków wsyp pokruszone herbatniki.</li>
+      <li>Dodaj krem, następnie maliny.</li>
+      <li>Powtórz warstwy i schłódź w lodówce.</li>
+    </ol>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="img1" class="lightbox">
+    <a href="#" class="close">×</a>
+    <img src="lotus-1.jpg">
+  </div>
+
+  <div id="img2" class="lightbox">
+    <a href="#" class="close">×</a>
+    <img src="lotus-2.jpg">
+  </div>
+
+  <div id="img3" class="lightbox">
+    <a href="#" class="close">×</a>
+    <img src="lotus-3.jpg">
+  </div>
+
+  <div id="img4" class="lightbox">
+    <a href="#" class="close">×</a>
+    <img src="lotus-4.jpg">
   </div>
 
 </body>
