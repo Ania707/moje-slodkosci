@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
- <style>
-  body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #fff8f2;
-    color: #3a2a20;
-    max-width: 1000px;
-    margin: auto;
-    padding: 30px;
-  }
+  <meta charset="UTF-8">
+  <title>Moje słodkości</title>
 
-  h1 {
-  text-align: center;
-  color: #8b1d3d;
-}
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #fff8f2;
+      color: #3a2a20;
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+    }
 
-h2 {
-  margin-top: 50px;
-  color: #b03060;
-}
-  }
+    h1 {
+      text-align: center;
+      color: #8b1d3d; /* malinowy */
+      margin-bottom: 10px;
+    }
 
-  p {
-    line-height: 1.6;
-  }
+    h2 {
+      margin-top: 30px;
+      color: #b03060; /* jaśniejsza malina */
+    }
 
-  .gallery {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
+    p {
+      line-height: 1.6;
+    }
 
-  .gallery img {
-    width: 220px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  }
-  .dessert {
-  background-color: #fff;
-  border-radius: 16px;
-  padding: 25px;
-  margin-top: 30px;
-  box-shadow: 0 8px 20px rgba(176,48,96,0.15);
-  border-left: 6px solid #b03060;
-} 
-  .gallery img:hover {
-    transform: scale(1.03);
-    transition: transform 0.3s ease;
-  }
-</style>
+    .gallery {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    .gallery img {
+      width: 220px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      transition: transform 0.3s ease;
+    }
+
+    .dessert {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 25px;
+      margin-top: 30px;
+      box-shadow: 0 8px 20px rgba(176,48,96,0.15);
+      border-left: 6px solid #b03060;
+    }
+  </style>
 </head>
+
 <body>
+
   <h1>Moje domowe wypieki i desery na każdą okazję 🍪</h1>
   <p>Tu zapisuję i pokazuję moje słodkości.</p>
 
-  
+  <div class="dessert">
+    <h2>Deser Lotus z malinami</h2>
 
-  
+    <div class="gallery">
+      <img src="lotus-1.jpg" alt="Deser Lotus z malinami">
+      <img src="lotus-2.jpg" alt="Deser Lotus z malinami">
+      <img src="lotus-3.jpg" alt="Deser Lotus z malinami">
+      <img src="lotus-4.jpg" alt="Deser Lotus z malinami">
+    </div>
+
+    <p>Słodkie, korzenne i lekko karmelowe.</p>
+  </div>
+
 </body>
 </html>
