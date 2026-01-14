@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Domowe słodkości</title>
+<title>Domowe desery</title>
 
 <style>
 body {
@@ -14,6 +14,7 @@ body {
   padding: 40px;
 }
 
+/* ===== GÓRA STRONY ===== */
 h1 {
   font-family: "Playfair Display", Georgia, serif;
   text-align: center;
@@ -23,23 +24,32 @@ h1 {
 }
 
 .subtitle {
-  font-family: "Segoe UI", Arial, sans-serif;
   text-align: center;
   font-size: 18px;
   color: #7a4a57;
   letter-spacing: 0.3px;
   margin-bottom: 40px;
 }
-}
 
+/* ===== TYTUŁ DESERU ===== */
 h2 {
   font-family: "Playfair Display", Georgia, serif;
   text-align: center;
-  color: #8b1d3d; /* malinowy */
-  font-size: 30px;
-  margin-bottom: 30px;
-  letter-spacing: 0.5px;
+  color: #8b1d3d;
+  font-size: 32px;
+  margin-bottom: 35px;
+  letter-spacing: 0.6px;
 }
+
+/* subtelna malinowa kreska pod tytułem */
+h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #b03060;
+  margin: 14px auto 0;
+  border-radius: 2px;
 }
 
 h3 {
@@ -47,7 +57,7 @@ h3 {
   margin-top: 30px;
 }
 
-/* GALERIA */
+/* ===== GALERIA ===== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -57,11 +67,11 @@ h3 {
 
 .gallery a {
   background: white;
-  padding: 12px 12px 30px 12px;
+  padding: 12px 12px 30px;
   border-radius: 6px;
   box-shadow: 0 8px 18px rgba(176,48,96,0.18);
   transform: rotate(-1deg);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .gallery a:nth-child(even) {
@@ -76,14 +86,8 @@ h3 {
   width: 100%;
   border-radius: 4px;
 }
-.footer {
-  margin-top: 60px;
-  text-align: center;
-  font-size: 14px;
-  color: #8b1d3d;
-  opacity: 0.6;
-}
-/* DESER BOX */
+
+/* ===== KARTA DESERU ===== */
 .dessert {
   background: #ffffff;
   border-radius: 18px;
@@ -95,10 +99,11 @@ h3 {
 
 .description {
   font-style: italic;
-  margin-top: 15px;
+  margin-top: 20px;
+  color: #6a3a4a;
 }
 
-/* LISTY */
+/* ===== LISTY ===== */
 .ingredients {
   list-style: "🍓 ";
   margin-left: 20px;
@@ -119,74 +124,81 @@ h3 {
   font-weight: bold;
   color: #8b1d3d;
 }
+
+/* ===== STOPKA ===== */
+.footer {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 14px;
+  color: #8b1d3d;
+  opacity: 0.6;
+}
 </style>
 </head>
 
 <body>
 
-<h1>Słodkości na każdą okazję 🍪</h1>
+<h1>Domowe desery na każdą okazję 🍪</h1>
 <p class="subtitle">Z domowej kuchni — trochę kremu, owoców i dużo radości</p>
 
 <div class="dessert">
 
-<h2>Deser Lotus z malinami</h2>
+  <h2>Deser Lotus z malinami</h2>
 
-<div class="gallery">
-  <a href="lotus-1.jpg" target="_blank">
-    <img src="lotus-1.jpg" alt="Deser Lotus z malinami">
-  </a>
-  <a href="lotus-2.jpg" target="_blank">
-    <img src="lotus-2.jpg" alt="Deser Lotus z malinami">
-  </a>
-  <a href="lotus-3.jpg" target="_blank">
-    <img src="lotus-3.jpg" alt="Deser Lotus z malinami">
-  </a>
-  <a href="lotus-4.jpg" target="_blank">
-    <img src="lotus-4.jpg" alt="Deser Lotus z malinami">
-  </a>
-</div>
+  <div class="gallery">
+    <a href="lotus-1.jpg" target="_blank">
+      <img src="lotus-1.jpg" alt="Deser Lotus z malinami">
+    </a>
+    <a href="lotus-2.jpg" target="_blank">
+      <img src="lotus-2.jpg" alt="Deser Lotus z malinami">
+    </a>
+    <a href="lotus-3.jpg" target="_blank">
+      <img src="lotus-3.jpg" alt="Deser Lotus z malinami">
+    </a>
+    <a href="lotus-4.jpg" target="_blank">
+      <img src="lotus-4.jpg" alt="Deser Lotus z malinami">
+    </a>
+  </div>
 
-<p class="description">
-  Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami. 
-  Idealny na spokojne popołudnie przy kawie lub herbacie ☕
-</p>
+  <p class="description">
+    Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami.
+    Idealny na spokojne popołudnie przy kawie lub herbacie ☕
+  </p>
 
-<h3>Składniki</h3>
-<ul class="ingredients">
-  <li>250 g mascarpone</li>
-  <li>200 ml śmietanki 36%</li>
-  <li>2 łyżki cukru pudru</li>
-  <li>2 łyżki masła orzechowego</li>
-  <li>4–5 łyżek pasty Lotus Biscoff</li>
-  <li>Herbatniki Lotus (125 g + ok. 1/2 opakowania do dekoracji)</li>
-  <li>Masło – 60 g</li>
-  <li>Świeże maliny</li>
-</ul>
+  <h3>Składniki</h3>
+  <ul class="ingredients">
+    <li>250 g mascarpone</li>
+    <li>200 ml śmietanki 36%</li>
+    <li>2 łyżki cukru pudru</li>
+    <li>2 łyżki masła orzechowego</li>
+    <li>4–5 łyżek pasty Lotus Biscoff</li>
+    <li>Herbatniki Lotus (125 g + ok. 1/2 opakowania do dekoracji)</li>
+    <li>Masło – 60 g</li>
+    <li>Świeże maliny</li>
+  </ul>
 
-<h3>Sposób przygotowania</h3>
-<ol class="steps">
-  <li>Masło rozpuść w rondelku i pozostaw do ostygnięcia.</li>
-  <li>Herbatniki rozkrusz i połącz z rozpuszczonym masłem.</li>
-  <li>Ubij śmietankę na sztywno (jeśli nie chce się ubić, możesz dodać śmietan-fix).</li>
-  <li>Mascarpone krótko zmiksuj i dodaj masło orzechowe – tylko do połączenia składników.</li>
-  <li>Dodaj ubitą śmietankę i delikatnie wymieszaj szpatułką do uzyskania gładkiej masy.</li>
-  <li>W pucharkach układaj warstwami pokruszone herbatniki i krem.</li>
-
-  <li class="important">
-    Krem Biscoff rozpuść w kąpieli wodnej – nie wlewaj gorącego na masę, bo może się zwarzyć!
-  </li>
-
-  <li>Do dekoracji użyj pokruszonych herbatników oraz świeżych malin.</li>
-
-  <li class="important">
-    Schładzaj w lodówce minimum 2 godziny.
-  </li>
-</ol>
+  <h3>Sposób przygotowania</h3>
+  <ol class="steps">
+    <li>Masło rozpuść w rondelku i pozostaw do ostygnięcia.</li>
+    <li>Herbatniki rozkrusz i połącz z rozpuszczonym masłem.</li>
+    <li>Ubij śmietankę na sztywno.</li>
+    <li>Mascarpone krótko zmiksuj i dodaj masło orzechowe.</li>
+    <li>Dodaj ubitą śmietankę i delikatnie wymieszaj.</li>
+    <li>Układaj warstwami herbatniki i krem.</li>
+    <li class="important">
+      Krem Biscoff rozpuść w kąpieli wodnej – nie wlewaj gorącego na masę!
+    </li>
+    <li>Udekoruj malinami i herbatnikami.</li>
+    <li class="important">
+      Schładzaj w lodówce minimum 2 godziny.
+    </li>
+  </ol>
 
 </div>
 
-</body>
-  <footer class="footer">
+<footer class="footer">
   Zrobione z sercem 🤍 w domowej kuchni
 </footer>
+
+</body>
 </html>
