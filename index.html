@@ -2,20 +2,19 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Domowe desery</title>
+<title>Domowe wypieki</title>
 
 <style>
-/* ===== TŁO Z DELIKATNĄ TEKSTURĄ ===== */
+/* ====== TŁO ====== */
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   background:
-    linear-gradient(0deg, rgba(255,248,251,0.95), rgba(255,248,251,0.95)),
     repeating-linear-gradient(
       45deg,
-      #f6e6ec,
-      #f6e6ec 2px,
-      #fff8fb 2px,
-      #fff8fb 6px
+      #fff8fb,
+      #fff8fb 10px,
+      #fff3f7 10px,
+      #fff3f7 20px
     );
   color: #3a2a20;
   max-width: 1100px;
@@ -23,58 +22,108 @@ body {
   padding: 40px;
 }
 
-/* ===== GÓRA STRONY ===== */
+/* ====== MENU ====== */
+.menu {
+  background: white;
+  padding: 14px 0;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(176,48,96,0.15);
+  margin-bottom: 40px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #8b1d3d;
+  font-size: 16px;
+}
+
+.menu a:hover {
+  color: #b03060;
+}
+
+/* dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  padding: 10px 0;
+  min-width: 200px;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.dropdown-menu a {
+  color: #3a2a20;
+  font-weight: normal;
+}
+
+.dropdown-menu a:hover {
+  color: #8b1d3d;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ====== NAGŁÓWKI ====== */
 h1 {
   font-family: "Playfair Display", Georgia, serif;
   text-align: center;
   color: #8b1d3d;
-  font-size: 42px;
-  margin-bottom: 8px;
+  font-size: 44px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
   text-align: center;
   font-size: 18px;
   color: #7a4a57;
-  letter-spacing: 0.3px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
-/* ===== TYTUŁ DESERU ===== */
 h2 {
   font-family: "Playfair Display", Georgia, serif;
   text-align: center;
-  color: #8b1d3d;
+  color: #b03060;
   font-size: 32px;
-  margin-bottom: 35px;
-  letter-spacing: 0.6px;
-}
-
-h2::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 2px;
-  background-color: #b03060;
-  margin: 14px auto 0;
-  border-radius: 2px;
+  margin-bottom: 30px;
 }
 
 h3 {
   color: #8b1d3d;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
-/* ===== IKONKI PRZY NAGŁÓWKACH ===== */
-h3.ingredients-title::before {
-  content: "🍓 ";
+/* ====== DESER ====== */
+.dessert {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(176,48,96,0.2);
+  border-left: 8px solid #b03060;
 }
 
-h3.steps-title::before {
-  content: "📋 ";
-}
-
-/* ===== GALERIA ===== */
+/* ====== GALERIA ====== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -84,16 +133,16 @@ h3.steps-title::before {
 
 .gallery a {
   background: white;
-  padding: 12px 12px 30px;
+  padding: 12px 12px 28px 12px;
   border-radius: 6px;
-  box-shadow: 0 8px 18px rgba(176,48,96,0.18);
+  box-shadow: 0 8px 18px rgba(176,48,96,0.2);
   transform: rotate(-1deg);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 
-.gallery a:nth-child(2) { transform: rotate(2deg); }
-.gallery a:nth-child(3) { transform: rotate(-3deg); }
-.gallery a:nth-child(4) { transform: rotate(1deg); }
+.gallery a:nth-child(even) {
+  transform: rotate(2deg);
+}
 
 .gallery a:hover {
   transform: rotate(0deg) scale(1.05);
@@ -104,56 +153,43 @@ h3.steps-title::before {
   border-radius: 4px;
 }
 
-/* ===== KARTA DESERU ===== */
-.dessert {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 35px;
-  margin-top: 40px;
-  box-shadow: 0 12px 30px rgba(176,48,96,0.18);
-  border-left: 8px solid #b03060;
-}
-
+/* ====== OPIS ====== */
 .description {
   font-style: italic;
-  margin-top: 20px;
-  color: #6a3a4a;
+  margin-top: 25px;
 }
 
-/* ===== LISTY ===== */
+/* ====== LISTY ====== */
 .ingredients {
   list-style: "🍓 ";
   margin-left: 20px;
 }
 
 .steps {
-  margin-left: 20px;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .steps li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.steps li::before {
+  content: "☕ ";
 }
 
 .important {
   background: #ffe6ee;
-  padding: 10px 14px;
-  border-radius: 8px;
+  padding: 12px 16px;
+  border-radius: 10px;
   font-weight: bold;
   color: #8b1d3d;
 }
 
-/* ===== ZAPOWIEDŹ ===== */
-.next-dessert {
-  margin-top: 60px;
-  text-align: center;
-  font-style: italic;
-  color: #8b1d3d;
-  opacity: 0.6;
-}
-
-/* ===== STOPKA ===== */
+/* ====== STOPKA ====== */
 .footer {
-  margin-top: 120px;
+  margin-top: 60px;
   text-align: center;
   font-size: 14px;
   color: #8b1d3d;
@@ -164,58 +200,72 @@ h3.steps-title::before {
 
 <body>
 
-<h1>Domowe desery na każdą okazję 🍪</h1>
-<p class="subtitle">Z domowej kuchni — trochę kremu, owoców i dużo radości</p>
-
-<div class="dessert">
-
-  <h2>Deser Lotus z malinami</h2>
-
-  <div class="gallery">
-    <a href="lotus-1.jpg" target="_blank"><img src="lotus-1.jpg"></a>
-    <a href="lotus-2.jpg" target="_blank"><img src="lotus-2.jpg"></a>
-    <a href="lotus-3.jpg" target="_blank"><img src="lotus-3.jpg"></a>
-    <a href="lotus-4.jpg" target="_blank"><img src="lotus-4.jpg"></a>
-  </div>
-
-  <p class="description">
-    Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami.
-    Idealny na spokojne popołudnie przy kawie lub herbacie ☕
-  </p>
-
-  <h3 class="ingredients-title">Składniki</h3>
-  <ul class="ingredients">
-    <li>250 g mascarpone</li>
-    <li>200 ml śmietanki 36%</li>
-    <li>2 łyżki cukru pudru</li>
-    <li>2 łyżki masła orzechowego</li>
-    <li>4–5 łyżek pasty Lotus Biscoff</li>
-    <li>Herbatniki Lotus (125 g + ok. 1/2 opakowania do dekoracji)</li>
-    <li>Masło – 60 g</li>
-    <li>Świeże maliny</li>
+<!-- MENU -->
+<nav class="menu">
+  <ul>
+    <li><a href="#">Strona główna</a></li>
+    <li class="dropdown">
+      <a href="#">Desery ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#lotus">Desery w pucharkach</a></li>
+        <li><a href="#">Serniki</a></li>
+        <li><a href="#">Ciasta</a></li>
+      </ul>
+    </li>
+    <li><a href="#">O mnie</a></li>
+    <li><a href="#">Kontakt</a></li>
   </ul>
+</nav>
 
-  <h3 class="steps-title">Sposób przygotowania</h3>
-  <ol class="steps">
-    <li>Masło rozpuść i pozostaw do ostygnięcia.</li>
-    <li>Herbatniki rozkrusz i połącz z masłem.</li>
-    <li>Ubij śmietankę na sztywno.</li>
-    <li>Mascarpone zmiksuj z masłem orzechowym.</li>
-    <li>Dodaj śmietankę i delikatnie wymieszaj.</li>
-    <li>Układaj warstwami herbatniki i krem.</li>
-    <li class="important">Krem Biscoff rozpuść w kąpieli wodnej – nie wlewaj gorącego!</li>
-    <li>Udekoruj malinami.</li>
-    <li class="important">Schładzaj w lodówce minimum 2 godziny.</li>
-  </ol>
+<h1>Domowe wypieki na każdą okazję 🍰</h1>
+<p class="subtitle">
+Z domowej kuchni — krem, owoce i radość pieczenia
+</p>
 
+<div class="dessert" id="lotus">
+
+<h2>Deser Lotus z malinami</h2>
+
+<div class="gallery">
+  <a href="lotus-1.jpg" target="_blank"><img src="lotus-1.jpg"></a>
+  <a href="lotus-2.jpg" target="_blank"><img src="lotus-2.jpg"></a>
+  <a href="lotus-3.jpg" target="_blank"><img src="lotus-3.jpg"></a>
+  <a href="lotus-4.jpg" target="_blank"><img src="lotus-4.jpg"></a>
 </div>
 
-<div class="next-dessert">
-  Kolejny deser już wkrótce… 🍰
+<p class="description">
+Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami.
+Idealny na spokojne popołudnie przy kawie lub herbacie ☕
+</p>
+
+<h3>Składniki</h3>
+<ul class="ingredients">
+  <li>250 g mascarpone</li>
+  <li>200 ml śmietanki 36%</li>
+  <li>2 łyżki cukru pudru</li>
+  <li>2 łyżki masła orzechowego</li>
+  <li>4–5 łyżek pasty Lotus Biscoff</li>
+  <li>Herbatniki Lotus</li>
+  <li>Masło 60 g</li>
+  <li>Świeże maliny</li>
+</ul>
+
+<h3>Sposób przygotowania</h3>
+<ul class="steps">
+  <li>Rozpuść masło i odstaw do ostygnięcia.</li>
+  <li>Herbatniki rozkrusz i połącz z masłem.</li>
+  <li>Ubij śmietankę na sztywno.</li>
+  <li>Mascarpone krótko zmiksuj z masłem orzechowym.</li>
+  <li>Dodaj śmietankę i delikatnie wymieszaj.</li>
+  <li>Układaj warstwami herbatniki i krem.</li>
+  <li class="important">Nie wlewaj gorącej pasty Biscoff do masy!</li>
+  <li>Schładzaj minimum 2 godziny.</li>
+</ul>
+
 </div>
 
 <footer class="footer">
-  Zrobione z sercem 🤍 w domowej kuchni
+Zrobione z sercem 🤍 w domowej kuchni
 </footer>
 
 </body>
