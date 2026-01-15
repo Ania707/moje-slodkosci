@@ -28,11 +28,11 @@ body {
 
 /* ===== MENU ===== */
 nav {
-  background: #ffffff;
+  background: white;
   padding: 16px 24px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(176,48,96,0.15);
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 
 nav ul {
@@ -46,7 +46,6 @@ nav a {
   text-decoration: none;
   color: #8b1d3d;
   font-weight: 600;
-  font-size: 16px;
 }
 
 nav a:hover {
@@ -63,7 +62,7 @@ nav a:hover {
   position: absolute;
   top: 40px;
   left: 0;
-  background: #ffffff;
+  background: white;
   border-radius: 12px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   min-width: 220px;
@@ -84,12 +83,11 @@ nav a:hover {
   color: #8b1d3d;
 }
 
-/* pokazuj menu po najechaniu */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* ===== STRONA GŁÓWNA ===== */
+/* ===== HEADER ===== */
 header {
   text-align: center;
   margin-bottom: 80px;
@@ -105,6 +103,107 @@ h1 {
 .subtitle {
   font-size: 18px;
   color: #7a4a57;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  margin-bottom: 100px;
+}
+
+/* ===== DESSERT CARD ===== */
+.dessert {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 14px 35px rgba(176,48,96,0.18);
+  border-left: 8px solid #b03060;
+}
+
+.dessert h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  text-align: center;
+  color: #b03060;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.gallery a {
+  background: white;
+  padding: 12px 12px 28px;
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(176,48,96,0.18);
+  transform: rotate(-1deg);
+  transition: 0.3s;
+}
+
+.gallery a:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.gallery a:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* ===== TEXT ===== */
+.description {
+  font-style: italic;
+  margin: 25px 0;
+}
+
+h3 {
+  color: #8b1d3d;
+  margin-top: 35px;
+}
+
+/* ===== LISTS ===== */
+.ingredients {
+  list-style: "🍓 ";
+  margin-left: 25px;
+}
+
+.steps {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.steps li {
+  margin-bottom: 10px;
+}
+
+.steps li::before {
+  content: "☕ ";
+}
+
+.important {
+  background: #ffe6ee;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #8b1d3d;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 14px;
+  color: #8b1d3d;
+  opacity: 0.6;
 }
 </style>
 </head>
@@ -139,15 +238,15 @@ h1 {
   </ul>
 </nav>
 
-<!-- ===== STRONA GŁÓWNA ===== -->
+<!-- ===== HOME ===== -->
 <header id="home">
   <h1>Domowe desery na każdą okazję 🍰</h1>
   <p class="subtitle">
-    Z domowej kuchni — kremy, owoce i dużo radości
+    Z domowej kuchni — kremy, owoce i radość pieczenia
   </p>
 </header>
 
-<!-- ===== SEKCJE (NA RAZIE PUSTE) ===== -->
+<!-- ===== LOTUS ===== -->
 <section id="lotus">
 
   <div class="dessert">
@@ -193,16 +292,10 @@ h1 {
   </div>
 
 </section>
-<section id="snickers"></section>
-<section id="oreo"></section>
 
-<section id="bez-pieczenia"></section>
-<section id="pieczone"></section>
-
-<section id="torty"></section>
-
-<section id="o-mnie"></section>
+<footer>
+Zrobione z sercem 🤍 w domowej kuchni
+</footer>
 
 </body>
 </html>
-
