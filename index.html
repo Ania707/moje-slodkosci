@@ -8,21 +8,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-/* ===== RESET ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ===== BODY ===== */
 body {
   font-family: 'Montserrat', sans-serif;
   background: #fff8fb;
   color: #3a2a20;
 }
 
-/* ===== MENU ===== */
+/* MENU */
 .navbar {
   background: #ffffff;
   box-shadow: 0 4px 14px rgba(176,48,96,0.12);
@@ -32,7 +30,7 @@ body {
 .navbar ul {
   list-style: none;
   display: flex;
-  justify-content: center; /* WYŚRODKOWANIE */
+  justify-content: center;
   gap: 40px;
 }
 
@@ -47,7 +45,6 @@ body {
   font-size: 16px;
 }
 
-/* dropdown */
 .navbar ul ul {
   position: absolute;
   top: 28px;
@@ -75,36 +72,55 @@ body {
   font-size: 14px;
 }
 
-/* ===== GŁÓWNA TREŚĆ ===== */
+/* TREŚĆ */
 .container {
   max-width: 1100px;
   margin: auto;
-  padding: 50px 40px;
+  padding: 55px 40px;
 }
 
-/* ===== NAGŁÓWKI ===== */
 h1 {
   font-family: 'Playfair Display', serif;
   text-align: center;
   color: #8b1d3d;
   font-size: 46px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .subtitle {
   text-align: center;
   font-size: 18px;
   color: #7a4a57;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-/* ===== DESER ===== */
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 0;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  width: 70px;
+  height: 1px;
+  background: #e2a3b5;
+  margin: 0 15px;
+}
+
+.separator span {
+  font-size: 20px;
+}
+
+/* DESER */
 .dessert {
   background: #ffffff;
   border-radius: 18px;
-  padding: 35px;
+  padding: 38px;
   box-shadow: 0 12px 30px rgba(176,48,96,0.18);
-  border-left: 8px solid #b03060;
+  border-left: 6px solid #b03060;
 }
 
 h2 {
@@ -112,32 +128,14 @@ h2 {
   text-align: center;
   color: #8b1d3d;
   font-size: 32px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
-/* ===== GALERIA ===== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  gap: 26px;
   margin-bottom: 30px;
-}
-
-.gallery a {
-  background: white;
-  padding: 12px 12px 28px;
-  border-radius: 6px;
-  box-shadow: 0 8px 18px rgba(176,48,96,0.18);
-  transform: rotate(-1deg);
-  transition: 0.3s;
-}
-
-.gallery a:nth-child(even) {
-  transform: rotate(2deg);
-}
-
-.gallery a:hover {
-  transform: rotate(0deg) scale(1.05);
 }
 
 .gallery img {
@@ -145,46 +143,47 @@ h2 {
   border-radius: 4px;
 }
 
-/* ===== TEKST ===== */
 .description {
   font-style: italic;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
+  line-height: 1.6;
 }
 
 h3 {
   color: #8b1d3d;
-  margin-top: 35px;
-}
-
-/* ===== LISTY ===== */
-.ingredients {
-  list-style: "🍓 ";
-  margin-left: 20px;
-}
-
-.steps {
-  margin-left: 20px;
-}
-
-.steps li {
+  margin-top: 32px;
   margin-bottom: 10px;
 }
 
-/* ===== WAŻNE ===== */
-.important {
+.ingredients {
+  list-style: "🍓 ";
+  margin-left: 22px;
+  line-height: 1.7;
+}
+
+.steps {
+  margin-left: 22px;
+  line-height: 1.7;
+}
+
+.steps li {
+  margin-bottom: 6px;
+}
+
+/* INFORMACJA DO KROKU */
+.step-note {
   background: #ffe6ee;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-radius: 8px;
-  font-weight: 500;
+  font-size: 14px;
   color: #8b1d3d;
-  margin: 15px 0;
+  margin: 6px 0 14px 0;
 }
 </style>
 </head>
 
 <body>
 
-<!-- MENU -->
 <nav class="navbar">
   <ul>
     <li>
@@ -193,14 +192,12 @@ h3 {
         <li><a href="#">Deser Lotus z malinami</a></li>
       </ul>
     </li>
-
     <li>
       <a href="#">Ciasta ▾</a>
       <ul>
         <li><a href="#">Ciasta bez pieczenia</a></li>
       </ul>
     </li>
-
     <li><a href="#">Torty</a></li>
     <li><a href="#">O mnie</a></li>
     <li><a href="#">Instagram</a></li>
@@ -212,18 +209,20 @@ h3 {
 <h1>Domowe desery na każdą okazję</h1>
 <p class="subtitle">Z domowej kuchni — krem, owoce i radość przygotowywania</p>
 
+<div class="separator"><span>🍰</span></div>
+
 <div class="dessert">
 
 <h2>Deser Lotus z malinami</h2>
 
 <div class="gallery">
-  <a href="lotus-1a.jpg" target="_blank"><img src="lotus-1a.jpg"></a>
-  <a href="lotus-2.jpg" target="_blank"><img src="lotus-2.jpg"></a>
-  <a href="lotus-3a.jpg" target="_blank"><img src="lotus-3a.jpg"></a>
+  <img src="lotus-1a.jpg">
+  <img src="lotus-2.jpg">
+  <img src="lotus-3a.jpg">
 </div>
 
 <p class="description">
-Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami.  
+Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami.
 Idealny na spokojne popołudnie przy kawie lub herbacie ☕
 </p>
 
@@ -234,7 +233,7 @@ Idealny na spokojne popołudnie przy kawie lub herbacie ☕
   <li>2 łyżki cukru pudru</li>
   <li>2 łyżki masła orzechowego</li>
   <li>4–5 łyżek pasty Lotus Biscoff</li>
-  <li>Ciastka Lotus (125g+ kilka do dekoracji</li>
+  <li>Ciastka Lotus (125g+ kilka do dekoracji).</li>
   <li>Masło – 60 g</li>
   <li>Świeże maliny</li>
 </ul>
@@ -246,13 +245,14 @@ Idealny na spokojne popołudnie przy kawie lub herbacie ☕
   <li>Ubij śmietankę na sztywno (możesz dodać opakowanie śmietan-fixu).</li>
   <li>Mascarpone krótko zmiksuj i dodaj masło orzechowe - tylko do połączenia składników.</li>
   <li>Dodaj ubitą wcześniej śmietankę i delikatnie wymieszaj do uzyskania gładkiej masy.</li>
-  <li>Układaj w pucharkach warstwami - na sam spód ciastka a póżniej krem.</li>
-  <li> Na krem wylej rozpuszczony w kąpieli wodnej krem Lotus.</li>
+  <li>Układaj w pucharkach warstwami – najpierw ciastka, potem krem.</li>
 
-  <li class="important">
-    Nie dodawaj gorącego kremu na masę – może się zwarzyć.
-  </li>
-<li>Udekoruj pokruszonymi ciastkami oraz świeżymi malinami.</li>
+  <li>Na wierzch wylej lekko podgrzany krem Lotus.</li>
+  <div class="step-note">
+    ⚠️ Nie dodawaj gorącego kremu na masę – może się zwarzyć.
+  </div>
+
+  <li>Udekoruj pokruszonymi ciastkami oraz świeżymi malinami.</li>
   <li>Schładzaj w lodówce minimum 2 godziny.</li>
 </ol>
 
