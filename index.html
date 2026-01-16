@@ -14,7 +14,7 @@
   padding: 0;
 }
 
-/* ===== BODY + TŁO ===== */
+/* ===== BODY + GRADIENT ===== */
 body {
   font-family: 'Montserrat', sans-serif;
   color: #3a2a20;
@@ -29,30 +29,29 @@ body {
   position: relative;
 }
 
-/* ===== RYSY SŁODKOŚCI PO BOKACH ===== */
+/* ===== CIASTKA / BABECZKI / TORTY PO BOKACH ===== */
 body::before,
 body::after {
-  content: "";
+  content: "🍪\A🧁\A🎂\A\A🍪\A🧁\A🎂\A\A🍪\A🧁\A🎂";
+  white-space: pre;
   position: fixed;
   top: 0;
-  width: 260px;
+  width: 120px;
   height: 100%;
-  background-repeat: repeat-y;
-  background-size: 240px;
-  opacity: 0.22;
+  font-size: 40px;
+  line-height: 70px;
+  opacity: 0.35;
+  pointer-events: none;
   z-index: 0;
 }
 
-/* LEWA STRONA */
 body::before {
-  left: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='800'%3E%3Cg fill='none' stroke='%238b1d3d' stroke-width='3'%3E%3C!-- BABECZKA --%3E%3Cpath d='M60 70c20-35 120-35 140 0'/%3E%3Cpath d='M80 70v60h100V70z'/%3E%3Cpath d='M100 55c20-15 40-15 60 0'/%3E%3C!-- CIASTECZKO --%3E%3Ccircle cx='150' cy='220' r='38'/%3E%3Ccircle cx='140' cy='210' r='4'/%3E%3Ccircle cx='165' cy='230' r='4'/%3E%3Ccircle cx='155' cy='245' r='4'/%3E%3C!-- TORCIK --%3E%3Crect x='80' y='300' width='120' height='35' rx='8'/%3E%3Crect x='70' y='335' width='140' height='45' rx='8'/%3E%3Ccircle cx='140' cy='290' r='6'/%3E%3C!-- BABECZKA --%3E%3Cpath d='M60 450c20-35 120-35 140 0'/%3E%3Cpath d='M80 450v60h100V450z'/%3E%3Cpath d='M100 435c20-15 40-15 60 0'/%3E%3C!-- CIASTECZKO --%3E%3Ccircle cx='150' cy='620' r='38'/%3E%3Ccircle cx='140' cy='610' r='4'/%3E%3Ccircle cx='165' cy='635' r='4'/%3E%3C/g%3E%3C/svg%3E");
+  left: 20px;
 }
 
-/* PRAWA STRONA */
 body::after {
-  right: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='800'%3E%3Cg fill='none' stroke='%238b1d3d' stroke-width='3'%3E%3C!-- TORCIK --%3E%3Crect x='60' y='60' width='140' height='45' rx='8'/%3E%3Crect x='70' y='105' width='120' height='35' rx='8'/%3E%3Ccircle cx='130' cy='50' r='6'/%3E%3C!-- CIASTECZKO --%3E%3Ccircle cx='130' cy='220' r='38'/%3E%3Ccircle cx='120' cy='210' r='4'/%3E%3Ccircle cx='145' cy='235' r='4'/%3E%3Ccircle cx='135' cy='245' r='4'/%3E%3C!-- BABECZKA --%3E%3Cpath d='M60 350c20-35 120-35 140 0'/%3E%3Cpath d='M80 350v60h100V350z'/%3E%3Cpath d='M100 335c20-15 40-15 60 0'/%3E%3C!-- TORCIK --%3E%3Crect x='60' y='520' width='140' height='45' rx='8'/%3E%3Crect x='70' y='565' width='120' height='35' rx='8'/%3E%3Ccircle cx='130' cy='510' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  right: 20px;
+  text-align: right;
 }
 
 /* ===== MENU ===== */
@@ -72,17 +71,13 @@ body::after {
   gap: 40px;
 }
 
-.navbar li {
-  position: relative;
-}
-
 .navbar a {
   text-decoration: none;
-  font-weight: 500;
   color: #8b1d3d;
+  font-weight: 500;
 }
 
-/* ===== CONTAINER ===== */
+/* ===== CONTENT ===== */
 .container {
   max-width: 1100px;
   margin: auto;
