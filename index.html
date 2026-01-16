@@ -8,20 +8,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+/* ===== RESET ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== BODY ===== */
 body {
   font-family: 'Montserrat', sans-serif;
   background: #fff8fb;
   color: #3a2a20;
 }
 
-/* MENU */
+/* ===== STICKY MENU ===== */
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: #ffffff;
   box-shadow: 0 4px 14px rgba(176,48,96,0.12);
   padding: 16px 0;
@@ -43,11 +52,20 @@ body {
   font-weight: 500;
   color: #8b1d3d;
   font-size: 16px;
+  padding: 6px 4px;
+  transition: color 0.2s, border-bottom 0.2s;
 }
 
+/* hover */
+.navbar a:hover {
+  color: #b03060;
+  border-bottom: 2px solid #b03060;
+}
+
+/* dropdown */
 .navbar ul ul {
   position: absolute;
-  top: 28px;
+  top: 34px;
   left: 50%;
   transform: translateX(-50%);
   background: white;
@@ -68,17 +86,19 @@ body {
 }
 
 .navbar ul ul a {
-  color: #3a2a20;
   font-size: 14px;
+  color: #3a2a20;
+  border-bottom: none;
 }
 
-/* TREŚĆ */
+/* ===== CONTENT ===== */
 .container {
   max-width: 1100px;
   margin: auto;
-  padding: 55px 40px;
+  padding: 60px 40px;
 }
 
+/* ===== HEADERS ===== */
 h1 {
   font-family: 'Playfair Display', serif;
   text-align: center;
@@ -114,7 +134,7 @@ h1 {
   font-size: 20px;
 }
 
-/* DESER */
+/* ===== DESER ===== */
 .dessert {
   background: #ffffff;
   border-radius: 18px;
@@ -131,6 +151,7 @@ h2 {
   margin-bottom: 28px;
 }
 
+/* ===== GALERIA ===== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -143,6 +164,7 @@ h2 {
   border-radius: 4px;
 }
 
+/* ===== TEKST ===== */
 .description {
   font-style: italic;
   margin-bottom: 28px;
@@ -155,6 +177,7 @@ h3 {
   margin-bottom: 10px;
 }
 
+/* ===== LISTY ===== */
 .ingredients {
   list-style: "🍓 ";
   margin-left: 22px;
@@ -167,10 +190,10 @@ h3 {
 }
 
 .steps li {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
-/* INFORMACJA DO KROKU */
+/* ===== NOTATKA DO KROKU ===== */
 .step-note {
   background: #ffe6ee;
   padding: 10px 14px;
@@ -184,12 +207,13 @@ h3 {
 
 <body>
 
+<!-- MENU -->
 <nav class="navbar">
   <ul>
     <li>
       <a href="#">Desery ▾</a>
       <ul>
-        <li><a href="#">Deser Lotus z malinami</a></li>
+        <li><a href="#lotus">Deser Lotus z malinami</a></li>
       </ul>
     </li>
     <li>
@@ -211,21 +235,24 @@ h3 {
 
 <div class="separator"><span>🍰</span></div>
 
+<!-- ===== PRZEPIS ===== -->
+<section id="lotus">
 <div class="dessert">
 
 <h2>Deser Lotus z malinami</h2>
 
 <div class="gallery">
   <img src="lotus-1a.jpg">
-  <img src="lotus-2a.jpg">
-  <img src="lotus-3new.jpg">
+  <img src="lotus-2.jpg">
+  <img src="lotus-3a.jpg">
 </div>
 
 <p class="description">
-Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami.
+Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami.  
 Idealny na spokojne popołudnie przy kawie lub herbacie ☕
 </p>
 
+<!-- ⛔ TEN BLOK JEST NIETKNIĘTY -->
 <h3>Składniki</h3>
 <ul class="ingredients">
   <li>250 g mascarpone</li>
@@ -257,6 +284,8 @@ Idealny na spokojne popołudnie przy kawie lub herbacie ☕
 </ol>
 
 </div>
+</section>
+
 </div>
 
 </body>
