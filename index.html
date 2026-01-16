@@ -2,36 +2,65 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>BakebyAnia</title>
+<title>Bake by Ania</title>
 
 <!-- CZCIONKI -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+/* ===== RESET ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* ===== BODY + TŁO ===== */
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #fff8fb;
   color: #3a2a20;
+  background:
+    linear-gradient(90deg,
+      #fdebf2 0%,
+      #fff8fb 25%,
+      #fff8fb 75%,
+      #fdebf2 100%);
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* ===== STICKY MENU ===== */
+/* ===== LINE ART PO BOKACH ===== */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 220px;
+  height: 100%;
+  opacity: 0.08;
+  background-repeat: repeat-y;
+  background-size: 200px;
+  z-index: 0;
+}
+
+body::before {
+  left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='400' viewBox='0 0 200 400'%3E%3Cg fill='none' stroke='%238b1d3d' stroke-width='2'%3E%3Cpath d='M40 40c20-20 60-20 80 0'/%3E%3Ccircle cx='80' cy='70' r='20'/%3E%3Cpath d='M60 120h40'/%3E%3Cpath d='M50 150c30 30 70 30 100 0'/%3E%3Cpath d='M30 220h140'/%3E%3Cpath d='M60 260c20-20 60-20 80 0'/%3E%3Ccircle cx='100' cy='290' r='18'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+body::after {
+  right: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='400' viewBox='0 0 200 400'%3E%3Cg fill='none' stroke='%238b1d3d' stroke-width='2'%3E%3Cpath d='M60 50c40-30 80-10 90 20'/%3E%3Crect x='60' y='90' width='80' height='40' rx='8'/%3E%3Cpath d='M50 160h100'/%3E%3Ccircle cx='100' cy='200' r='22'/%3E%3Cpath d='M40 260c40 20 80 20 120 0'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ===== MENU ===== */
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 1000;
   background: #ffffff;
   box-shadow: 0 4px 14px rgba(176,48,96,0.12);
   padding: 16px 0;
+  z-index: 10;
 }
 
 .navbar ul {
@@ -49,19 +78,11 @@ body {
   text-decoration: none;
   font-weight: 500;
   color: #8b1d3d;
-  font-size: 16px;
-  padding: 6px 4px;
 }
 
-.navbar a:hover {
-  color: #b03060;
-  border-bottom: 2px solid #b03060;
-}
-
-/* dropdown */
 .navbar ul ul {
   position: absolute;
-  top: 34px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
   background: white;
@@ -73,73 +94,44 @@ body {
   text-align: center;
 }
 
-.navbar ul li:hover ul {
+.navbar li:hover ul {
   display: block;
 }
 
-.navbar ul ul li {
-  padding: 8px 20px;
-}
-
-.navbar ul ul a {
-  font-size: 14px;
-  color: #3a2a20;
-  border-bottom: none;
-}
-
-/* ===== CONTENT ===== */
+/* ===== CONTAINER ===== */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 60px 40px;
+  position: relative;
+  z-index: 1;
 }
 
 /* ===== LOGO ===== */
-.logo-wrapper {
+.logo {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
-.logo-wrapper img {
-  max-width: 260px;
-  width: 100%;
+.logo img {
+  max-width: 220px;
 }
 
-.logo-text {
+.tagline {
+  text-align: center;
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  color: #7a4a57;
-  margin-top: 14px;
-}
-
-/* ===== SEPARATOR ===== */
-.separator {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 40px 0;
-}
-
-.separator::before,
-.separator::after {
-  content: "";
-  width: 70px;
-  height: 1px;
-  background: #e2a3b5;
-  margin: 0 15px;
-}
-
-.separator span {
-  font-size: 20px;
+  font-size: 22px;
+  color: #8b1d3d;
+  margin-bottom: 60px;
 }
 
 /* ===== DESER ===== */
 .dessert {
   background: #ffffff;
   border-radius: 18px;
-  padding: 38px;
+  padding: 35px;
   box-shadow: 0 12px 30px rgba(176,48,96,0.18);
-  border-left: 6px solid #b03060;
+  border-left: 8px solid #b03060;
 }
 
 h2 {
@@ -147,71 +139,63 @@ h2 {
   text-align: center;
   color: #8b1d3d;
   font-size: 32px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 /* ===== GALERIA ===== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 26px;
+  gap: 30px;
   margin-bottom: 30px;
 }
 
 .gallery img {
   width: 100%;
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(176,48,96,0.18);
 }
 
 /* ===== TEKST ===== */
 .description {
   font-style: italic;
-  margin-bottom: 28px;
-  line-height: 1.6;
+  margin-bottom: 25px;
 }
 
 h3 {
   color: #8b1d3d;
-  margin-top: 32px;
-  margin-bottom: 10px;
+  margin-top: 35px;
 }
 
 /* ===== LISTY ===== */
 .ingredients {
   list-style: "🍓 ";
-  margin-left: 22px;
-  line-height: 1.7;
+  margin-left: 20px;
 }
 
 .steps {
-  margin-left: 22px;
-  line-height: 1.7;
-}
-
-.steps li {
-  margin-bottom: 8px;
+  margin-left: 20px;
 }
 
 .step-note {
   background: #ffe6ee;
-  padding: 10px 14px;
+  padding: 12px 16px;
   border-radius: 8px;
-  font-size: 14px;
   color: #8b1d3d;
-  margin: 6px 0 14px 0;
+  margin: 10px 0 20px;
+  font-weight: 500;
 }
 </style>
 </head>
 
 <body>
 
-<!-- MENU -->
 <nav class="navbar">
   <ul>
     <li>
       <a href="#">Desery ▾</a>
       <ul>
-        <li><a href="#lotus">Deser Lotus z malinami</a></li>
+        <li><a href="#">Deser Lotus z malinami</a></li>
       </ul>
     </li>
     <li>
@@ -228,15 +212,11 @@ h3 {
 
 <div class="container">
 
-<!-- LOGO -->
-<div class="logo-wrapper">
-  <img src="logo.jpg" alt="Bake by Ania logo">
-  <div class="logo-text">Słodkości tworzone z pasją</div>
+<div class="logo">
+  <img src="logo.jpg" alt="Bake by Ania">
 </div>
+<p class="tagline">Słodkości tworzone z pasją</p>
 
-<div class="separator"><span>🍰</span></div>
-
-<section id="lotus">
 <div class="dessert">
 
 <h2>Deser Lotus z malinami</h2>
@@ -248,7 +228,7 @@ h3 {
 </div>
 
 <p class="description">
-Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami.  
+Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami.
 Idealny na spokojne popołudnie przy kawie lub herbacie ☕
 </p>
 
@@ -272,19 +252,13 @@ Idealny na spokojne popołudnie przy kawie lub herbacie ☕
   <li>Mascarpone krótko zmiksuj i dodaj masło orzechowe - tylko do połączenia składników.</li>
   <li>Dodaj ubitą wcześniej śmietankę i delikatnie wymieszaj do uzyskania gładkiej masy.</li>
   <li>Układaj w pucharkach warstwami – najpierw ciastka, potem krem.</li>
-
   <li>Na wierzch wylej lekko podgrzany krem Lotus.</li>
-  <div class="step-note">
-    ⚠️ Nie dodawaj gorącego kremu na masę – może się zwarzyć.
-  </div>
-
+  <div class="step-note">⚠️ Nie dodawaj gorącego kremu na masę – może się zwarzyć.</div>
   <li>Udekoruj pokruszonymi ciastkami oraz świeżymi malinami.</li>
   <li>Schładzaj w lodówce minimum 2 godziny.</li>
 </ol>
 
 </div>
-</section>
-
 </div>
 
 </body>
