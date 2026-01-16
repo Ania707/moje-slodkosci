@@ -15,7 +15,7 @@
   padding: 0;
 }
 
-/* ===== BODY + TŁO ===== */
+/* ===== BODY + GRADIENT ===== */
 body {
   font-family: 'Montserrat', sans-serif;
   color: #3a2a20;
@@ -29,28 +29,28 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== LINE ART PO BOKACH ===== */
+/* ===== LINE ART CUKIERNICZE PO BOKACH ===== */
 body::before,
 body::after {
   content: "";
   position: fixed;
   top: 0;
-  width: 220px;
+  width: 240px;
   height: 100%;
-  opacity: 0.08;
+  opacity: 0.10;
   background-repeat: repeat-y;
-  background-size: 200px;
+  background-size: 220px;
   z-index: 0;
 }
 
 body::before {
   left: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='400' viewBox='0 0 200 400'%3E%3Cg fill='none' stroke='%238b1d3d' stroke-width='2'%3E%3Cpath d='M40 40c20-20 60-20 80 0'/%3E%3Ccircle cx='80' cy='70' r='20'/%3E%3Cpath d='M60 120h40'/%3E%3Cpath d='M50 150c30 30 70 30 100 0'/%3E%3Cpath d='M30 220h140'/%3E%3Cpath d='M60 260c20-20 60-20 80 0'/%3E%3Ccircle cx='100' cy='290' r='18'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='600' viewBox='0 0 220 600'%3E%3Cg fill='none' stroke='%238b1d3d' stroke-width='2'%3E%3C!-- babeczka --%3E%3Cpath d='M60 60c20-30 80-30 100 0'/%3E%3Cpath d='M70 60v40h80V60'/%3E%3C!-- ciastko --%3E%3Ccircle cx='110' cy='160' r='26'/%3E%3Ccircle cx='102' cy='152' r='3'/%3E%3Ccircle cx='118' cy='168' r='3'/%3E%3C!-- tort --%3E%3Crect x='70' y='230' width='80' height='40' rx='6'/%3E%3Crect x='60' y='270' width='100' height='30' rx='6'/%3E%3C!-- babeczka --%3E%3Cpath d='M60 360c20-30 80-30 100 0'/%3E%3Cpath d='M70 360v40h80V360'/%3E%3C!-- ciastko --%3E%3Ccircle cx='110' cy='470' r='26'/%3E%3Ccircle cx='100' cy='462' r='3'/%3E%3Ccircle cx='120' cy='478' r='3'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 body::after {
   right: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='400' viewBox='0 0 200 400'%3E%3Cg fill='none' stroke='%238b1d3d' stroke-width='2'%3E%3Cpath d='M60 50c40-30 80-10 90 20'/%3E%3Crect x='60' y='90' width='80' height='40' rx='8'/%3E%3Cpath d='M50 160h100'/%3E%3Ccircle cx='100' cy='200' r='22'/%3E%3Cpath d='M40 260c40 20 80 20 120 0'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='600' viewBox='0 0 220 600'%3E%3Cg fill='none' stroke='%238b1d3d' stroke-width='2'%3E%3C!-- tort --%3E%3Crect x='60' y='40' width='100' height='30' rx='6'/%3E%3Crect x='70' y='70' width='80' height='40' rx='6'/%3E%3C!-- babeczka --%3E%3Cpath d='M60 150c20-30 80-30 100 0'/%3E%3Cpath d='M70 150v40h80V150'/%3E%3C!-- ciastko --%3E%3Ccircle cx='110' cy='260' r='26'/%3E%3Ccircle cx='100' cy='252' r='3'/%3E%3Ccircle cx='120' cy='268' r='3'/%3E%3C!-- tort --%3E%3Crect x='60' y='340' width='100' height='30' rx='6'/%3E%3Crect x='70' y='370' width='80' height='40' rx='6'/%3E%3C!-- babeczka --%3E%3Cpath d='M60 460c20-30 80-30 100 0'/%3E%3Cpath d='M70 460v40h80V460'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* ===== MENU ===== */
