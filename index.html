@@ -4,80 +4,70 @@
 <meta charset="UTF-8">
 <title>Bake by Ania</title>
 
-<!-- CZCIONKI -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-/* ===== RESET ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ===== BODY + GRADIENT ===== */
 body {
   font-family: 'Montserrat', sans-serif;
   color: #3a2a20;
-  background:
-    linear-gradient(90deg,
-      #fdebf2 0%,
-      #fff8fb 25%,
-      #fff8fb 75%,
-      #fdebf2 100%);
-  position: relative;
+  background: linear-gradient(90deg,#fdebf2 0%,#fff8fb 25%,#fff8fb 75%,#fdebf2 100%);
   overflow-x: hidden;
+  position: relative;
 }
 
-/* ===== LINE ART CUKIERNICZE PO BOKACH ===== */
+/* ===== WYRAŹNE LINE ART PO BOKACH ===== */
 body::before,
 body::after {
   content: "";
   position: fixed;
   top: 0;
-  width: 240px;
+  width: 260px;
   height: 100%;
-  opacity: 0.10;
   background-repeat: repeat-y;
-  background-size: 220px;
+  background-size: 240px;
+  opacity: 0.18; /* WYRAŹNIEJSZE */
   z-index: 0;
 }
 
 body::before {
   left: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='600' viewBox='0 0 220 600'%3E%3Cg fill='none' stroke='%238b1d3d' stroke-width='2'%3E%3C!-- babeczka --%3E%3Cpath d='M60 60c20-30 80-30 100 0'/%3E%3Cpath d='M70 60v40h80V60'/%3E%3C!-- ciastko --%3E%3Ccircle cx='110' cy='160' r='26'/%3E%3Ccircle cx='102' cy='152' r='3'/%3E%3Ccircle cx='118' cy='168' r='3'/%3E%3C!-- tort --%3E%3Crect x='70' y='230' width='80' height='40' rx='6'/%3E%3Crect x='60' y='270' width='100' height='30' rx='6'/%3E%3C!-- babeczka --%3E%3Cpath d='M60 360c20-30 80-30 100 0'/%3E%3Cpath d='M70 360v40h80V360'/%3E%3C!-- ciastko --%3E%3Ccircle cx='110' cy='470' r='26'/%3E%3Ccircle cx='100' cy='462' r='3'/%3E%3Ccircle cx='120' cy='478' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='700'%3E%3Cg fill='none' stroke='%238b1d3d' stroke-width='3'%3E%3C!-- BABECZKA --%3E%3Cpath d='M60 70c10-25 110-25 120 0'/%3E%3Cpath d='M70 70v50h100V70z'/%3E%3Cpath d='M90 55c10-10 30-10 40 0'/%3E%3C!-- CIASTKO --%3E%3Ccircle cx='130' cy='200' r='34'/%3E%3Ccircle cx='120' cy='190' r='4'/%3E%3Ccircle cx='145' cy='210' r='4'/%3E%3Ccircle cx='135' cy='220' r='4'/%3E%3C!-- TORT --%3E%3Crect x='70' y='290' width='120' height='35' rx='8'/%3E%3Crect x='60' y='325' width='140' height='40' rx='8'/%3E%3Cpath d='M130 275c0-10 15-10 15 0'/%3E%3C!-- BABECZKA --%3E%3Cpath d='M60 450c10-25 110-25 120 0'/%3E%3Cpath d='M70 450v50h100V450z'/%3E%3C!-- CIASTKO --%3E%3Ccircle cx='130' cy='600' r='34'/%3E%3Ccircle cx='120' cy='590' r='4'/%3E%3Ccircle cx='145' cy='610' r='4'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 body::after {
   right: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='600' viewBox='0 0 220 600'%3E%3Cg fill='none' stroke='%238b1d3d' stroke-width='2'%3E%3C!-- tort --%3E%3Crect x='60' y='40' width='100' height='30' rx='6'/%3E%3Crect x='70' y='70' width='80' height='40' rx='6'/%3E%3C!-- babeczka --%3E%3Cpath d='M60 150c20-30 80-30 100 0'/%3E%3Cpath d='M70 150v40h80V150'/%3E%3C!-- ciastko --%3E%3Ccircle cx='110' cy='260' r='26'/%3E%3Ccircle cx='100' cy='252' r='3'/%3E%3Ccircle cx='120' cy='268' r='3'/%3E%3C!-- tort --%3E%3Crect x='60' y='340' width='100' height='30' rx='6'/%3E%3Crect x='70' y='370' width='80' height='40' rx='6'/%3E%3C!-- babeczka --%3E%3Cpath d='M60 460c20-30 80-30 100 0'/%3E%3Cpath d='M70 460v40h80V460'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='700'%3E%3Cg fill='none' stroke='%238b1d3d' stroke-width='3'%3E%3C!-- TORT --%3E%3Crect x='60' y='60' width='140' height='40' rx='8'/%3E%3Crect x='70' y='100' width='120' height='45' rx='8'/%3E%3Cpath d='M135 45c0-10 15-10 15 0'/%3E%3C!-- CIASTKO --%3E%3Ccircle cx='130' cy='230' r='34'/%3E%3Ccircle cx='120' cy='220' r='4'/%3E%3Ccircle cx='145' cy='245' r='4'/%3E%3C!-- BABECZKA --%3E%3Cpath d='M60 350c10-25 110-25 120 0'/%3E%3Cpath d='M70 350v50h100V350z'/%3E%3Cpath d='M90 335c10-10 30-10 40 0'/%3E%3C!-- TORT --%3E%3Crect x='60' y='520' width='140' height='40' rx='8'/%3E%3Crect x='70' y='560' width='120' height='45' rx='8'/%3E%3Cpath d='M135 505c0-10 15-10 15 0'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* ===== MENU ===== */
 .navbar {
   position: sticky;
   top: 0;
-  background: #ffffff;
+  background: #fff;
   box-shadow: 0 4px 14px rgba(176,48,96,0.12);
   padding: 16px 0;
   z-index: 10;
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
   justify-content: center;
   gap: 40px;
+  list-style: none;
 }
 
-.navbar li {
-  position: relative;
-}
+.navbar li { position: relative; }
 
 .navbar a {
   text-decoration: none;
-  font-weight: 500;
   color: #8b1d3d;
+  font-weight: 500;
 }
 
 .navbar ul ul {
@@ -90,27 +80,22 @@ body::after {
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
   display: none;
-  min-width: 220px;
-  text-align: center;
 }
 
-.navbar li:hover ul {
-  display: block;
-}
+.navbar li:hover ul { display: block; }
 
-/* ===== CONTAINER ===== */
+/* ===== CONTENT ===== */
 .container {
   max-width: 1100px;
   margin: auto;
-  padding: 60px 40px;
+  padding: 70px 40px;
   position: relative;
   z-index: 1;
 }
 
-/* ===== LOGO ===== */
 .logo {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .logo img {
@@ -124,67 +109,6 @@ body::after {
   color: #8b1d3d;
   margin-bottom: 60px;
 }
-
-/* ===== DESER ===== */
-.dessert {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 35px;
-  box-shadow: 0 12px 30px rgba(176,48,96,0.18);
-  border-left: 8px solid #b03060;
-}
-
-h2 {
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-  color: #8b1d3d;
-  font-size: 32px;
-  margin-bottom: 30px;
-}
-
-/* ===== GALERIA ===== */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 6px;
-  box-shadow: 0 8px 18px rgba(176,48,96,0.18);
-}
-
-/* ===== TEKST ===== */
-.description {
-  font-style: italic;
-  margin-bottom: 25px;
-}
-
-h3 {
-  color: #8b1d3d;
-  margin-top: 35px;
-}
-
-/* ===== LISTY ===== */
-.ingredients {
-  list-style: "🍓 ";
-  margin-left: 20px;
-}
-
-.steps {
-  margin-left: 20px;
-}
-
-.step-note {
-  background: #ffe6ee;
-  padding: 12px 16px;
-  border-radius: 8px;
-  color: #8b1d3d;
-  margin: 10px 0 20px;
-  font-weight: 500;
-}
 </style>
 </head>
 
@@ -194,15 +118,11 @@ h3 {
   <ul>
     <li>
       <a href="#">Desery ▾</a>
-      <ul>
-        <li><a href="#">Deser Lotus z malinami</a></li>
-      </ul>
+      <ul><li><a href="#">Deser Lotus z malinami</a></li></ul>
     </li>
     <li>
       <a href="#">Ciasta ▾</a>
-      <ul>
-        <li><a href="#">Ciasta bez pieczenia</a></li>
-      </ul>
+      <ul><li><a href="#">Ciasta bez pieczenia</a></li></ul>
     </li>
     <li><a href="#">Torty</a></li>
     <li><a href="#">O mnie</a></li>
@@ -211,54 +131,10 @@ h3 {
 </nav>
 
 <div class="container">
-
-<div class="logo">
-  <img src="logo.jpg" alt="Bake by Ania">
-</div>
-<p class="tagline">Słodkości tworzone z pasją</p>
-
-<div class="dessert">
-
-<h2>Deser Lotus z malinami</h2>
-
-<div class="gallery">
-  <img src="lotus-1a.jpg">
-  <img src="lotus-2a.jpg">
-  <img src="lotus-3new.jpg">
-</div>
-
-<p class="description">
-Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami.
-Idealny na spokojne popołudnie przy kawie lub herbacie ☕
-</p>
-
-<h3>Składniki</h3>
-<ul class="ingredients">
-  <li>250 g mascarpone</li>
-  <li>200 ml śmietanki 36%</li>
-  <li>2 łyżki cukru pudru</li>
-  <li>2 łyżki masła orzechowego</li>
-  <li>4–5 łyżek pasty Lotus Biscoff</li>
-  <li>Ciastka Lotus (125g+ kilka do dekoracji).</li>
-  <li>Masło – 60 g</li>
-  <li>Świeże maliny</li>
-</ul>
-
-<h3>📝 Sposób przygotowania</h3>
-<ol class="steps">
-  <li>Masło rozpuść w rondelku i pozostaw do ostygnięcia.</li>
-  <li>Ciastka rozkrusz i połącz z masłem.</li>
-  <li>Ubij śmietankę na sztywno (możesz dodać opakowanie śmietan-fixu).</li>
-  <li>Mascarpone krótko zmiksuj i dodaj masło orzechowe - tylko do połączenia składników.</li>
-  <li>Dodaj ubitą wcześniej śmietankę i delikatnie wymieszaj do uzyskania gładkiej masy.</li>
-  <li>Układaj w pucharkach warstwami – najpierw ciastka, potem krem.</li>
-  <li>Na wierzch wylej lekko podgrzany krem Lotus.</li>
-  <div class="step-note">⚠️ Nie dodawaj gorącego kremu na masę – może się zwarzyć.</div>
-  <li>Udekoruj pokruszonymi ciastkami oraz świeżymi malinami.</li>
-  <li>Schładzaj w lodówce minimum 2 godziny.</li>
-</ol>
-
-</div>
+  <div class="logo">
+    <img src="logo.jpg" alt="Bake by Ania">
+  </div>
+  <p class="tagline">Słodkości tworzone z pasją</p>
 </div>
 
 </body>
