@@ -2,13 +2,12 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Domowe desery</title>
+<title>BakebyAnia</title>
 
 <!-- CZCIONKI -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-/* ===== RESET ===== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,7 +18,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===== BODY ===== */
 body {
   font-family: 'Montserrat', sans-serif;
   background: #fff8fb;
@@ -53,10 +51,8 @@ body {
   color: #8b1d3d;
   font-size: 16px;
   padding: 6px 4px;
-  transition: color 0.2s, border-bottom 0.2s;
 }
 
-/* hover */
 .navbar a:hover {
   color: #b03060;
   border-bottom: 2px solid #b03060;
@@ -98,27 +94,30 @@ body {
   padding: 60px 40px;
 }
 
-/* ===== HEADERS ===== */
-h1 {
+/* ===== LOGO ===== */
+.logo-wrapper {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.logo-wrapper img {
+  max-width: 260px;
+  width: 100%;
+}
+
+.logo-text {
   font-family: 'Playfair Display', serif;
-  text-align: center;
-  color: #8b1d3d;
-  font-size: 46px;
-  margin-bottom: 12px;
-}
-
-.subtitle {
-  text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   color: #7a4a57;
-  margin-bottom: 40px;
+  margin-top: 14px;
 }
 
+/* ===== SEPARATOR ===== */
 .separator {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 35px 0;
+  margin: 40px 0;
 }
 
 .separator::before,
@@ -193,7 +192,6 @@ h3 {
   margin-bottom: 8px;
 }
 
-/* ===== NOTATKA DO KROKU ===== */
 .step-note {
   background: #ffe6ee;
   padding: 10px 14px;
@@ -230,12 +228,14 @@ h3 {
 
 <div class="container">
 
-<h1>Domowe desery na każdą okazję</h1>
-<p class="subtitle">Z domowej kuchni — krem, owoce i radość przygotowywania</p>
+<!-- LOGO -->
+<div class="logo-wrapper">
+  <img src="logo.jpg" alt="Bake by Ania logo">
+  <div class="logo-text">Słodkości tworzone z pasją</div>
+</div>
 
 <div class="separator"><span>🍰</span></div>
 
-<!-- ===== PRZEPIS ===== -->
 <section id="lotus">
 <div class="dessert">
 
@@ -243,8 +243,8 @@ h3 {
 
 <div class="gallery">
   <img src="lotus-1a.jpg">
-  <img src="lotus-2a.jpg">
-  <img src="lotus-3new.jpg">
+  <img src="lotus-2.jpg">
+  <img src="lotus-3a.jpg">
 </div>
 
 <p class="description">
@@ -252,7 +252,6 @@ Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami.
 Idealny na spokojne popołudnie przy kawie lub herbacie ☕
 </p>
 
-<!-- ⛔ TEN BLOK JEST NIETKNIĘTY -->
 <h3>Składniki</h3>
 <ul class="ingredients">
   <li>250 g mascarpone</li>
