@@ -171,6 +171,7 @@ h3 {
 .gallery-small {
   max-width: 650px;
   margin: 0 auto 30px;
+  <div class="gallery gallery-kinder">
 }
 
 .gallery-small img {
@@ -202,6 +203,45 @@ h3 {
     grid-template-columns: 1fr;
   }
 }
+ /* ===== UKŁAD ZDJĘĆ KINDER: 1 DUŻE + 2 MNIEJSZE ===== */
+.gallery.gallery-kinder {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+/* pierwsze zdjęcie – DUŻE */
+.gallery.gallery-kinder a:first-child {
+  grid-row: 1 / span 2;
+}
+
+/* zdjęcia */
+.gallery.gallery-kinder img {
+  max-height: 320px;
+  object-fit: contain;
+  background: #fff;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .gallery.gallery-kinder {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery.gallery-kinder a:first-child {
+    grid-row: auto;
+  }
+}
+
+/* telefon */
+@media (max-width: 500px) {
+  .gallery.gallery-kinder {
+    grid-template-columns: 1fr;
+  }
+} 
 </style>
 </head>
 
