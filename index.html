@@ -167,70 +167,7 @@ h3 {
   .decor-left, .decor-right { display: none; }
   .container { padding: 40px 20px; }
 }
-  /* ===== MNIEJSZE ZDJĘCIA – KINDER COUNTRY ===== */
-.gallery-small {
-  max-width: 650px;
-  margin: 0 auto 30px;
-  <div class="gallery gallery-kinder">
-}
-
-.gallery-small img {
-  max-height: 320px;
-  object-fit: contain;
-  background: #fff;
-  .gallery-small a {
-  padding: 16px;
-}
-  /* ===== UKŁAD ZDJĘĆ – KINDER COUNTRY ===== */
-.gallery-small {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 800px;
-  margin: 0 auto 30px;
-}
-
-  }
-}
- /* ===== UKŁAD ZDJĘĆ KINDER: 1 DUŻE + 2 MNIEJSZE ===== */
-.gallery.gallery-kinder {
-  display: grid !important;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto 30px;
-}
-
-/* pierwsze zdjęcie – DUŻE */
-.gallery.gallery-kinder a:first-child {
-  grid-row: 1 / span 2;
-}
-
-/* zdjęcia */
-.gallery.gallery-kinder img {
-  max-height: 320px;
-  object-fit: contain;
-  background: #fff;
-}
-
-/* tablet */
-@media (max-width: 900px) {
-  .gallery.gallery-kinder {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .gallery.gallery-kinder a:first-child {
-    grid-row: auto;
-  }
-}
-
-/* telefon */
-@media (max-width: 500px) {
-  .gallery.gallery-kinder {
-    grid-template-columns: 1fr;
-  }
-} 
+ 
 </style>
 </head>
 
@@ -317,6 +254,70 @@ Idealny na spokojne popołudnie przy kawie lub herbacie ☕
 <div class="dessert" id="kinder">
 <h2>Ciasto Kinder Country bez pieczenia</h2>
 <div class="gallery gallery-kinder">
+   /* ===== MNIEJSZE ZDJĘCIA – KINDER COUNTRY ===== */
+.gallery-small {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  <div class="gallery gallery-kinder">
+}
+
+.gallery-small img {
+  max-height: 320px;
+  object-fit: contain;
+  background: #fff;
+  .gallery-small a {
+  padding: 16px;
+}
+  /* ===== UKŁAD ZDJĘĆ – KINDER COUNTRY ===== */
+.gallery-small {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+  }
+}
+ /* ===== UKŁAD ZDJĘĆ KINDER: 1 DUŻE + 2 MNIEJSZE ===== */
+.gallery.gallery-kinder {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+/* pierwsze zdjęcie – DUŻE */
+.gallery.gallery-kinder a:first-child {
+  grid-row: 1 / span 2;
+}
+
+/* zdjęcia */
+.gallery.gallery-kinder img {
+  max-height: 320px;
+  object-fit: contain;
+  background: #fff;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .gallery.gallery-kinder {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery.gallery-kinder a:first-child {
+    grid-row: auto;
+  }
+}
+
+/* telefon */
+@media (max-width: 500px) {
+  .gallery.gallery-kinder {
+    grid-template-columns: 1fr;
+  }
+} 
   <a href="kinder-1.jpg" target="_blank">
     <img src="kinder-1.jpg" alt="Ciasto Kinder Country">
     <img src="kinder-2.jpg" alt="Ciasto Kinder Country">
