@@ -180,6 +180,28 @@ h3 {
   .gallery-small a {
   padding: 16px;
 }
+  /* ===== UKŁAD ZDJĘĆ – KINDER COUNTRY ===== */
+.gallery-small {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .gallery-small {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* telefon */
+@media (max-width: 500px) {
+  .gallery-small {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 
