@@ -138,45 +138,6 @@ h2 {
   border-radius: 6px;
 }
 
-/* ===== KINDER: 1 DUŻE + 2 MNIEJSZE ===== */
-.gallery-kinder {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto 30px;
-}
-
-.gallery-kinder a:first-child {
-  grid-row: 1 / span 2;
-}
-
-.gallery-kinder img {
-  max-height: 320px;
-  object-fit: contain;
-  background: #fff;
-}
-
-/* RESPONSYWNOŚĆ */
-@media (max-width: 900px) {
-  .decor-left, .decor-right { display: none; }
-  .container { padding: 40px 20px; }
-
-  .gallery-kinder {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .gallery-kinder a:first-child {
-    grid-row: auto;
-  }
-}
-
-@media (max-width: 500px) {
-  .gallery-kinder {
-    grid-template-columns: 1fr;
-  }
-}
 </style>
 </head>
 
@@ -196,7 +157,7 @@ h2 {
   <li>
     <a href="#">Ciasta ▾</a>
     <ul>
-      <li><a href="#kinder">Ciasto Kinder Country</a></li>
+      
     </ul>
   </li>
   <li><a href="#">Torty</a></li>
@@ -223,16 +184,6 @@ h2 {
 </div>
 </div>
 
-<!-- ===== KINDER ===== -->
-<div class="dessert" id="kinder">
-<h2>Ciasto Kinder Country bez pieczenia</h2>
-
-<div class="gallery gallery-kinder">
-  <a href="kinder-1.jpg"><img src="kinder-1.jpg"></a>
-  <a href="kinder-2.jpg"><img src="kinder-2.jpg"></a>
-  <a href="kinder-3.jpg"><img src="kinder-3.jpg"></a>
-</div>
-</div>
 
 </div>
 </body>
