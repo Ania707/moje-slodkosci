@@ -20,7 +20,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== DEKORACJE ===== */
+/* ===== DEKORACJE BOCZNE ===== */
 .decor-left, .decor-right {
   position: fixed;
   top: 0;
@@ -48,7 +48,7 @@ body {
 .navbar {
   position: sticky;
   top: 0;
-  background: #fff;
+  background: #ffffff;
   box-shadow: 0 4px 14px rgba(176,48,96,0.12);
   padding: 16px 0;
   z-index: 10;
@@ -99,7 +99,9 @@ body {
   margin-bottom: 20px;
 }
 
-.logo img { max-width: 220px; }
+.logo img {
+  max-width: 220px;
+}
 
 .subtitle {
   text-align: center;
@@ -109,8 +111,9 @@ body {
   margin-bottom: 60px;
 }
 
+/* ===== DESER ===== */
 .dessert {
-  background: #fff;
+  background: #ffffff;
   border-radius: 18px;
   padding: 40px;
   box-shadow: 0 12px 30px rgba(176,48,96,0.18);
@@ -125,12 +128,19 @@ h2 {
   margin-bottom: 30px;
 }
 
-/* ===== GALERIE ===== */
+/* ===== GALERIA ===== */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
   margin-bottom: 30px;
+}
+
+.gallery a {
+  background: white;
+  padding: 12px 12px 28px;
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(176,48,96,0.18);
 }
 
 .gallery img {
@@ -138,6 +148,44 @@ h2 {
   border-radius: 6px;
 }
 
+/* ===== TEKST ===== */
+.description {
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+/* ===== LISTY ===== */
+h3 {
+  color: #8b1d3d;
+  margin-top: 35px;
+}
+
+.ingredients {
+  list-style: "🍓 ";
+  margin-left: 20px;
+}
+
+.steps {
+  margin-left: 20px;
+}
+
+.steps li {
+  margin-bottom: 10px;
+}
+
+.step-note {
+  background: #ffe6ee;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #8b1d3d;
+  margin: 10px 0 20px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .decor-left, .decor-right { display: none; }
+  .container { padding: 40px 20px; }
+}
 </style>
 </head>
 
@@ -154,12 +202,7 @@ h2 {
       <li><a href="#lotus">Deser Lotus z malinami</a></li>
     </ul>
   </li>
-  <li>
-    <a href="#">Ciasta ▾</a>
-    <ul>
-      
-    </ul>
-  </li>
+  <li><a href="#">Ciasta</a></li>
   <li><a href="#">Torty</a></li>
   <li><a href="#">O mnie</a></li>
   <li><a href="#">Instagram</a></li>
@@ -171,20 +214,57 @@ h2 {
 <div class="logo">
   <img src="logo-new.jpg" alt="Bake by Ania">
 </div>
+
 <p class="subtitle">Słodkości tworzone z pasją</p>
 
 <!-- ===== LOTUS ===== -->
 <div class="dessert" id="lotus">
+
 <h2>Deser Lotus z malinami</h2>
 
 <div class="gallery">
-  <a href="lotus-1a.jpg"><img src="lotus-1a.jpg"></a>
-  <a href="lotus-2a.jpg"><img src="lotus-2a.jpg"></a>
-  <a href="lotus-3new.jpg"><img src="lotus-3new.jpg"></a>
+  <a href="lotus-1a.jpg" target="_blank"><img src="lotus-1a.jpg"></a>
+  <a href="lotus-2a.jpg" target="_blank"><img src="lotus-2a.jpg"></a>
+  <a href="lotus-3new.jpg" target="_blank"><img src="lotus-3new.jpg"></a>
+</div>
+
+<p class="description">
+Kremowy, słodki, lekko karmelowy deser przełamany świeżymi malinami.  
+Idealny na spokojne popołudnie przy kawie lub herbacie ☕
+</p>
+
+<h3>Składniki</h3>
+<ul class="ingredients">
+  <li>250 g mascarpone</li>
+  <li>200 ml śmietanki 36%</li>
+  <li>2 łyżki cukru pudru</li>
+  <li>2 łyżki masła orzechowego</li>
+  <li>4–5 łyżek pasty Lotus Biscoff</li>
+  <li>Ciastka Lotus (125 g + kilka do dekoracji)</li>
+  <li>Masło – 60 g</li>
+  <li>Świeże maliny</li>
+</ul>
+
+<h3>📝 Sposób przygotowania</h3>
+<ol class="steps">
+  <li>Masło rozpuść w rondelku i pozostaw do ostygnięcia.</li>
+  <li>Ciastka rozkrusz i połącz z masłem.</li>
+  <li>Ubij śmietankę na sztywno.</li>
+  <li>Mascarpone krótko zmiksuj i dodaj masło orzechowe.</li>
+  <li>Dodaj ubitą śmietankę i delikatnie wymieszaj.</li>
+  <li>Układaj w pucharkach warstwami – ciastka i krem.</li>
+  <li>Na wierzch wylej lekko podgrzany krem Lotus.</li>
+
+  <div class="step-note">
+    ⚠️ Nie dodawaj gorącego kremu na masę – może się zwarzyć.
+  </div>
+
+  <li>Udekoruj pokruszonymi ciastkami oraz malinami.</li>
+  <li>Schładzaj w lodówce minimum 2 godziny.</li>
+</ol>
+
 </div>
 </div>
 
-
-</div>
 </body>
 </html>
