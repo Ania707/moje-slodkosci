@@ -161,8 +161,25 @@ h3 {
 }
 
 .ingredients {
-  list-style: "🍓 ";
-  margin-left: 20px;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.ingredients li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 8px;
+}
+
+.ingredients li::before {
+  content: "🍇";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  color: #b03060; /* malinowy */
+}
 }
 
 .steps {
@@ -249,17 +266,17 @@ Idealny na spokojne popołudnie przy kawie lub herbacie ☕
 <ol class="steps">
   <li>Masło rozpuść w rondelku i pozostaw do ostygnięcia.</li>
   <li>Ciastka rozkrusz i połącz z masłem.</li>
-  <li>Ubij śmietankę na sztywno.</li>
-  <li>Mascarpone krótko zmiksuj i dodaj masło orzechowe.</li>
-  <li>Dodaj ubitą śmietankę i delikatnie wymieszaj.</li>
-  <li>Układaj w pucharkach warstwami – ciastka i krem.</li>
+  <li>Ubij śmietankę na sztywno (możesz dodać opakowanie śmietan-fixu).</li>
+  <li>Mascarpone krótko zmiksuj i dodaj masło orzechowe - tylko do połączenia składników.</li>
+  <li>Dodaj ubitą wcześniej śmietankę i delikatnie wymieszaj do uzyskania gładkiej masy.</li>
+  <li>Układaj w pucharkach warstwami – najpierw ciastka, potem krem.</li>
   <li>Na wierzch wylej lekko podgrzany krem Lotus.</li>
 
   <div class="step-note">
     ⚠️ Nie dodawaj gorącego kremu na masę – może się zwarzyć.
   </div>
 
-  <li>Udekoruj pokruszonymi ciastkami oraz malinami.</li>
+  <li>Udekoruj pokruszonymi ciastkami oraz świeżymi malinami.</li>
   <li>Schładzaj w lodówce minimum 2 godziny.</li>
 </ol>
 
